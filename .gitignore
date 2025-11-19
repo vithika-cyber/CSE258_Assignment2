@@ -1,0 +1,47 @@
+# Dataset files - team should download these separately
+PP_recipes.csv
+RAW_interactions.csv
+RAW_recipes.csv
+PP_users.csv
+ingr_map.pkl
+interactions_test.csv
+interactions_train.csv
+interactions_validation.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Additional data files (uncomment if needed)
+# *.csv
+# *.json
+# *.pkl
+# *.pickle
+
+# Model files
+*.h5
+*.model
+*.pt
+*.pth
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
