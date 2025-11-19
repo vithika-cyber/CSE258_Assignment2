@@ -40,39 +40,6 @@ This directory contains everything you need to get started with your recipe reco
 #    └── README.md
 ```
 
-### 📖 Documentation (Just Created for You)
-
-1. **`GETTING_STARTED.md`** ⭐ **START HERE!**
-   - Quick start guide
-   - Step-by-step instructions
-   - Implementation roadmap
-   - Assignment report structure
-
-2. **`DATASET_SUMMARY_AND_RECOMMENDATIONS.md`**
-   - Comprehensive dataset analysis
-   - Detailed statistics and characteristics
-   - Recommendation task options
-   - Challenge analysis (sparsity, cold-start, bias)
-   - Suggested models and approaches
-
-3. **`starter_template.py`**
-   - Ready-to-run Python template
-   - 4 baseline models already implemented:
-     - Global Mean Baseline
-     - User Mean Baseline
-     - Recipe Mean Baseline
-     - User + Recipe Bias Model
-   - Feature engineering functions
-   - Evaluation metrics
-   - TODOs for advanced models
-
-4. **`visualize_data.py`**
-   - Data visualization script
-   - Creates 9-panel analysis plot
-   - Prints key statistics
-   - Run this first to understand the data!
-
----
 
 ## 🚀 Quick Start
 
