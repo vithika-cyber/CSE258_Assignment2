@@ -4,15 +4,44 @@
 
 This directory contains everything you need to get started with your recipe recommendation project.
 
-### 📊 Data Files (Already Present)
-- `RAW_recipes.csv` - 231,637 recipes with full metadata
-- `RAW_interactions.csv` - 1,132,367 user-recipe interactions
+### 📊 Data Files (NOT INCLUDED - Download Required)
+
+**⚠️ IMPORTANT**: Dataset files are NOT included in this repository due to their large size (800+ MB total).
+
+**Required Data Files**:
+- `RAW_recipes.csv` - 231,637 recipes with full metadata (~280 MB)
+- `RAW_interactions.csv` - 1,132,367 user-recipe interactions (~332 MB)
 - `interactions_train.csv` - Training set (698,901 interactions)
 - `interactions_validation.csv` - Validation set (7,023 interactions)  
 - `interactions_test.csv` - Test set (12,455 interactions)
-- `PP_recipes.csv` - Preprocessed recipes with tokenized features
+- `PP_recipes.csv` - Preprocessed recipes with tokenized features (~195 MB)
 - `PP_users.csv` - Preprocessed user profiles
 - `ingr_map.pkl` - Ingredient ID mapping
+
+**📥 Where to Download**:
+1. **Original Dataset**: [Food.com Recipes and Interactions](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions)
+   - Download from Kaggle (requires free Kaggle account)
+   
+2. **Preprocessed Files**: Contact your team lead or check your shared drive
+   - The preprocessed files (`PP_*.csv`, `interactions_*.csv`, `ingr_map.pkl`) were created by our team
+
+**📂 Setup Instructions**:
+```bash
+# 1. Download all required data files
+# 2. Place them in the project root directory (same folder as this README)
+# 3. Your directory structure should look like:
+#    CSE 258_A2/
+#    ├── RAW_recipes.csv
+#    ├── RAW_interactions.csv
+#    ├── interactions_train.csv
+#    ├── interactions_validation.csv
+#    ├── interactions_test.csv
+#    ├── PP_recipes.csv
+#    ├── PP_users.csv
+#    ├── ingr_map.pkl
+#    ├── starter_template.py
+#    └── README.md
+```
 
 ### 📖 Documentation (Just Created for You)
 
@@ -48,7 +77,11 @@ This directory contains everything you need to get started with your recipe reco
 
 ---
 
-## 🚀 Quick Start (3 Steps)
+## 🚀 Quick Start
+
+### Step 0: Download the Data ⚠️
+**Before running any code, download all required dataset files** (see "Data Files" section above).
+Place them in the project root directory.
 
 ### Step 1: Visualize the Data
 ```bash
