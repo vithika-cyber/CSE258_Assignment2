@@ -1,10 +1,12 @@
 # CSE 258 Assignment 2 - Recipe Recommendation System
 
-## 📋 Project Files
+## 📋 Project Overview
 
-This directory contains everything you need to get started with your recipe recommendation project.
+This repository contains code and analysis for a recipe recommendation system using the Food.com dataset.
 
-### 📊 Data Files (NOT INCLUDED - Download Required)
+---
+
+## 📊 Data Files (NOT INCLUDED - Download Required)
 
 **⚠️ IMPORTANT**: Dataset files are NOT included in this repository due to their large size (800+ MB total).
 
@@ -19,8 +21,8 @@ This directory contains everything you need to get started with your recipe reco
 - `ingr_map.pkl` - Ingredient ID mapping
 
 **📥 Where to Download**:
-1. **Original Dataset**: [Food.com Recipes and Interactions](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions)
-   - Download from Kaggle (requires free Kaggle account)
+- **Original Dataset**: [Food.com Recipes and Interactions](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions)
+  - Download from Kaggle (requires free Kaggle account)
 
 **📂 Setup Instructions**:
 ```bash
@@ -37,38 +39,74 @@ This directory contains everything you need to get started with your recipe reco
 #    ├── PP_users.csv
 #    ├── ingr_map.pkl
 #    ├── starter_template.py
+#    ├── advanced_models.py
 #    └── README.md
 ```
 
+---
 
 ## 🚀 Quick Start
 
-### Step 0: Download the Data ⚠️
+### Step 1: Download the Data ⚠️
 **Before running any code, download all required dataset files** (see "Data Files" section above).
 Place them in the project root directory.
 
-### Step 1: Visualize the Data
+### Step 2: Install Dependencies
+```bash
+pip install pandas numpy scikit-learn matplotlib seaborn
+pip install scikit-surprise  # For collaborative filtering
+```
+
+### Step 3: Visualize the Data (Optional)
 ```bash
 python visualize_data.py
 ```
 This creates `food_dataset_analysis.png` showing rating distribution, user activity, recipe features, etc.
 
-### Step 2: Read the Documentation
-Start with **`GETTING_STARTED.md`** for a complete walkthrough.
-
-### Step 3: Run the Baseline Template
+### Step 4: Run the Models
 ```bash
+# Run baseline models
 python starter_template.py
+
+# Run advanced models
+python advanced_models.py
 ```
-This will train and evaluate 4 baseline models on your data.
 
 ---
 
-## 🎯 Recommended Project
+## 📁 Repository Files
+
+### Python Scripts
+- **`starter_template.py`** - Baseline models implementation
+  - Global mean prediction
+  - User mean prediction
+  - Recipe mean prediction
+  - User + Recipe bias model
+  
+- **`advanced_models.py`** - Advanced model implementations
+  - Matrix Factorization (SVD, ALS)
+  - Content-based filtering
+  - Hybrid models
+  
+- **`visualize_data.py`** - Data visualization and analysis script
+
+### Documentation & Analysis
+- **`DATASET_SUMMARY_AND_RECOMMENDATIONS.md`** - Comprehensive dataset analysis and recommendations
+- **`RESULTS_ANALYSIS.md`** - Model evaluation results and insights
+- **`model_results.csv`** - Numerical results from model experiments
+- **`food_dataset_analysis.png`** - Visual analysis of the dataset
+- **`model_evaluation_results.png`** - Model performance visualizations
+
+### Assignment Materials
+- **`158 _ 258 2025 Assignment 2.pdf`** - Assignment instructions
+
+---
+
+## 🎯 Project Task
 
 **Task**: Personalized Recipe Rating Prediction & Top-K Recommendation
 
-**Why?**
+**Why This Task?**
 - ✅ Perfect for CSE 258 (collaborative filtering, matrix factorization)
 - ✅ Real-world application
 - ✅ Multiple interesting challenges
@@ -96,21 +134,24 @@ This will train and evaluate 4 baseline models on your data.
 - Cooking time, ingredients, steps
 - User reviews and ratings
 
+For detailed statistics and analysis, see `DATASET_SUMMARY_AND_RECOMMENDATIONS.md`.
+
 ---
 
-## 📈 Models to Implement
+## 📈 Models Implemented
 
-### Baselines (Already Implemented ✅)
-1. Global mean prediction
-2. User mean prediction
-3. Recipe mean prediction
-4. User + Recipe bias model
+### Baselines (in `starter_template.py`)
+1. ✅ Global mean prediction
+2. ✅ User mean prediction
+3. ✅ Recipe mean prediction
+4. ✅ User + Recipe bias model
 
-### Advanced Models (TODO)
-1. **Matrix Factorization** (SVD, ALS)
-2. **Content-Based Filtering** (using recipe features)
-3. **Hybrid Models** (combine CF + content)
-4. **Neural Collaborative Filtering** (optional)
+### Advanced Models (in `advanced_models.py`)
+1. ✅ Matrix Factorization (SVD, ALS)
+2. ✅ Content-Based Filtering (using recipe features)
+3. ✅ Hybrid Models (combine CF + content)
+
+For detailed results and analysis, see `RESULTS_ANALYSIS.md`.
 
 ---
 
@@ -125,12 +166,12 @@ This will train and evaluate 4 baseline models on your data.
 - Recall@K
 - NDCG@K (Normalized Discounted Cumulative Gain)
 
-**Cold-Start**:
+**Cold-Start Analysis**:
 - Performance on users with 1-3 interactions vs 10+ interactions
 
 ---
 
-## 📝 For Your Report
+## 📝 Assignment Report Structure
 
 Your assignment requires 4 sections:
 
@@ -139,39 +180,11 @@ Your assignment requires 4 sections:
 3. **Modeling** - ML formulation, model comparison, implementation details
 4. **Evaluation** - Results, baseline comparison, metrics justification
 
-See **`GETTING_STARTED.md`** Section 6 for detailed guidance.
-
----
-
-## 🛠️ Required Libraries
-
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
-pip install scikit-surprise  # For collaborative filtering
-```
-
----
-
-## 📚 Files Guide
-
-| File | Purpose | When to Use |
-|------|---------|-------------|
-| `GETTING_STARTED.md` | Complete walkthrough | Read FIRST |
-| `DATASET_SUMMARY_AND_RECOMMENDATIONS.md` | Deep data analysis | For EDA section |
-| `visualize_data.py` | Create visualizations | Run at start |
-| `starter_template.py` | Code template | Implementation |
-| This `README.md` | Quick reference | Anytime |
-
----
-
-## ✅ Next Steps
-
-1. ✅ Run `python visualize_data.py`
-2. ✅ Read `GETTING_STARTED.md`
-3. ✅ Read `DATASET_SUMMARY_AND_RECOMMENDATIONS.md`  
-4. ✅ Run `python starter_template.py`
-5. ✅ Start implementing advanced models
-6. ✅ Create your analysis notebook/report
+Refer to:
+- `DATASET_SUMMARY_AND_RECOMMENDATIONS.md` for exploratory analysis
+- `RESULTS_ANALYSIS.md` for evaluation insights
+- `model_results.csv` for numerical results
+- `food_dataset_analysis.png` and `model_evaluation_results.png` for visualizations
 
 ---
 
@@ -193,6 +206,19 @@ pip install scikit-surprise  # For collaborative filtering
 
 ---
 
+## ✅ Workflow
+
+1. ✅ Download required dataset files (see "Data Files" section)
+2. ✅ Install dependencies (`pip install pandas numpy scikit-learn matplotlib seaborn scikit-surprise`)
+3. ✅ Run `python visualize_data.py` to understand the data
+4. ✅ Read `DATASET_SUMMARY_AND_RECOMMENDATIONS.md` for detailed analysis
+5. ✅ Run `python starter_template.py` for baseline models
+6. ✅ Run `python advanced_models.py` for advanced models
+7. ✅ Review `RESULTS_ANALYSIS.md` for insights
+8. ✅ Use results to write your assignment report
+
+---
+
 ## 🎯 Success Criteria
 
 - ✅ Beat baseline models (RMSE < 0.85)
@@ -203,13 +229,12 @@ pip install scikit-surprise  # For collaborative filtering
 
 ---
 
-## 🎉 You're All Set!
+## 🎉 Ready to Go!
 
-Everything is prepared for you to start working on this interesting recommendation problem. The data is fascinating, the task is well-defined, and you have all the tools you need.
+Everything is prepared for you to start working on this recommendation system project. Download the data, run the code, and analyze the results!
 
-**Good luck and have fun! 🚀**
+**Good luck! 🚀**
 
 ---
 
-*Generated for CSE 258 Assignment 2 - Food.com Recipe Dataset*
-
+*CSE 258 Assignment 2 - Food.com Recipe Dataset*
