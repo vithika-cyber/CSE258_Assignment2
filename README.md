@@ -21,9 +21,6 @@ This directory contains everything you need to get started with your recipe reco
 **📥 Where to Download**:
 1. **Original Dataset**: [Food.com Recipes and Interactions](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions)
    - Download from Kaggle (requires free Kaggle account)
-   
-2. **Preprocessed Files**: Contact your team lead or check your shared drive
-   - The preprocessed files (`PP_*.csv`, `interactions_*.csv`, `ingr_map.pkl`) were created by our team
 
 **📂 Setup Instructions**:
 ```bash
