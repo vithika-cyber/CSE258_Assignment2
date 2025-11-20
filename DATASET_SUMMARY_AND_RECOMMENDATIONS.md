@@ -180,7 +180,7 @@
 
 ## 💡 My Recommendation: **Combined Task**
 
-I suggest combining Tasks 1 & 2 for a comprehensive project:
+Combining Tasks 1 & 2 for a comprehensive project:
 
 ### **"Personalized Recipe Recommendation with Rating Prediction"**
 
